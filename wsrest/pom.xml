@@ -5,4 +5,9 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>wsrest</name>
+  <modules>
+  	<module>wsrest-common</module>
+  	<module>wsrest-persistence</module>
+  	<module>wsrest-service</module>
+  </modules>
 </project>
