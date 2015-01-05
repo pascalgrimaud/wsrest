@@ -6,33 +6,25 @@
 		<artifactId>wsrest</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>wsrest-persistence</artifactId>
-	<name>wsrest-persistence</name>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+	<artifactId>wsrest-webservice</artifactId>
+	<packaging>war</packaging>
+	<name>wsrest-webservice</name>
 
 	<dependencies>
-		<!-- Dependances projet WSREST -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>wsrest-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>wsrest-service</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
+	
 	<build>
-		<finalName>wsrest-persistence</finalName>
+		<finalName>wsrest-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

@@ -23,6 +23,7 @@
 		<module>wsrest-common</module>
 		<module>wsrest-persistence</module>
 		<module>wsrest-service</module>
+		<module>wsrest-webservice</module>
 	</modules>
 
 	<dependencyManagement>
@@ -32,6 +33,14 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
+				<version>${wsrest.spring.version}</version>
+			</dependency>
+			<!-- Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, 
+				and iBatis. (depends on core, beans, context, transaction) Define this if 
+				you need ORM (org.springframework.orm.*) -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
 				<version>${wsrest.spring.version}</version>
 			</dependency>
 

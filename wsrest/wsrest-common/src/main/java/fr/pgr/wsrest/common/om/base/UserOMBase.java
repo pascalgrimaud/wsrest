@@ -8,7 +8,11 @@ import javax.persistence.MappedSuperclass;
 import fr.pgr.wsrest.common.om.User;
 
 @MappedSuperclass
-public class UserOMBase {
+public class UserOMBase extends OMBase {
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -5082456437884845907L;
 	private User user;
 
 	@ManyToOne(fetch = FetchType.LAZY)

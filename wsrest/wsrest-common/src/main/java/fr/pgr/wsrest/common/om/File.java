@@ -13,6 +13,11 @@ import fr.pgr.wsrest.common.om.base.UserOMBase;
 @Table(name = "file")
 public class File extends UserOMBase {
 	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -1512682183994023862L;
+
+	/**
 	 * File type of the file
 	 */
 	private FileType fileType;

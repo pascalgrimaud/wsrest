@@ -9,6 +9,10 @@ import fr.pgr.wsrest.common.om.base.UserOMBase;
 @Table(name = "note")
 public class Note extends UserOMBase {
 	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = 5655839966678453884L;
+	/**
 	 * content of the note
 	 */
 	private String content;
