@@ -22,7 +22,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
         </property>
     </bean>
 
-    <bean id="noteWs" class="fr.mael.jfreenote.ws.impl.NoteWs" scope="prototype" >
+    <bean id="noteWs" class="fr.pgr.wsrest.webservice.impl.NoteWs" scope="prototype" >
     	<property name="noteService" ref="noteService"/>
     </bean>
 </beans>

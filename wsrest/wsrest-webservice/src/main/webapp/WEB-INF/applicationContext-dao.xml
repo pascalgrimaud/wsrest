@@ -6,13 +6,13 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<!-- DAO -->
-	<bean id="daoBase" class="fr.mael.jfreenote.persistance.dao.base.impl.DaoBaseImpl" abstract="true">
+	<bean id="daoBase" class="fr.pgr.wsrest.persistence.dao.base.impl.DaoBaseImpl" abstract="true">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
 
-	<bean id="noteDao" class="fr.mael.jfreenote.persistance.dao.impl.hibernate.NoteDaoImpl" parent="daoBase"/>
-	<bean id="userDao" class="fr.mael.jfreenote.persistance.dao.impl.hibernate.UserDaoImpl" parent="daoBase"/>
-	<bean id="fileTypeDao" class="fr.mael.jfreenote.persistance.dao.impl.hibernate.FileTypeDaoImpl" parent="daoBase"/>
-	<bean id="fileDao" class="fr.mael.jfreenote.persistance.dao.impl.hibernate.FileDaoImpl" parent="daoBase"/>
+	<bean id="noteDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.NoteDaoImpl" parent="daoBase"/>
+	<bean id="userDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.UserDaoImpl" parent="daoBase"/>
+	<bean id="fileTypeDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.FileTypeDaoImpl" parent="daoBase"/>
+	<bean id="fileDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.FileDaoImpl" parent="daoBase"/>
 </beans>
