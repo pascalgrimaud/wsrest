@@ -2,10 +2,10 @@ package fr.pgr.wsrest.service.impl;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.authentication.dao.SaltSource;
+import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import fr.pgr.wsrest.common.om.User;
 import fr.pgr.wsrest.persistence.dao.UserDao;

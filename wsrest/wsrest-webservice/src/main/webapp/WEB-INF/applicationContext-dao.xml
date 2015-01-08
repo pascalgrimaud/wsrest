@@ -11,8 +11,8 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	</bean>
 
 
-	<bean id="noteDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.NoteDaoImpl" parent="daoBase"/>
-	<bean id="userDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.UserDaoImpl" parent="daoBase"/>
-	<bean id="fileTypeDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.FileTypeDaoImpl" parent="daoBase"/>
-	<bean id="fileDao" class="fr.pgr.wsrest.persistence.dao.impl.hibernate.FileDaoImpl" parent="daoBase"/>
+	<bean id="noteDao" class="fr.pgr.wsrest.persistence.dao.impl.NoteDaoImpl" parent="daoBase"/>
+	<bean id="userDao" class="fr.pgr.wsrest.persistence.dao.impl.UserDaoImpl" parent="daoBase"/>
+	<bean id="fileTypeDao" class="fr.pgr.wsrest.persistence.dao.impl.FileTypeDaoImpl" parent="daoBase"/>
+	<bean id="fileDao" class="fr.pgr.wsrest.persistence.dao.impl.FileDaoImpl" parent="daoBase"/>
 </beans>

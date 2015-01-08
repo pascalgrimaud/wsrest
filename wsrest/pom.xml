@@ -13,8 +13,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Spring -->
-		<wsrest.spring.version>4.1.3.RELEASE</wsrest.spring.version>
-		<wsrest.springsecurity.version>3.2.5.RELEASE</wsrest.springsecurity.version>
+		<wsrest.spring.version>3.0.3.RELEASE</wsrest.spring.version>
+		<wsrest.springsecurity.version>3.0.2.RELEASE</wsrest.springsecurity.version>
 		<!-- Hibernate -->
 		<wsrest.hibernate.version>3.6.4.Final</wsrest.hibernate.version>
 		<!-- Restlet -->
@@ -66,6 +66,37 @@
 				<artifactId>spring-core</artifactId>
 				<version>${wsrest.spring.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${wsrest.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>${wsrest.spring.version}</version>
+			</dependency>
+			<!-- Application Context (depends on spring-core, spring-expression, spring-aop, 
+				spring-beans) This is the central artifact for Spring's Dependency Injection 
+				Container and is generally always defined -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${wsrest.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${wsrest.spring.version}</version>
+			</dependency>
+
+			<!-- Bean Factory and JavaBeans utilities (depends on spring-core) Define 
+				this if you use Spring Bean APIs (org.springframework.beans.*) -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${wsrest.spring.version}</version>
+			</dependency>
 			<!-- Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, 
 				and iBatis. (depends on core, beans, context, transaction) Define this if 
 				you need ORM (org.springframework.orm.*) -->
@@ -81,6 +112,21 @@
 				<artifactId>spring-security-core</artifactId>
 				<version>${wsrest.springsecurity.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${wsrest.springsecurity.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-taglibs</artifactId>
+				<version>${wsrest.springsecurity.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${wsrest.springsecurity.version}</version>
+			</dependency>
 
 			<!-- Hibernate -->
 			<dependency>
@@ -88,11 +134,40 @@
 				<artifactId>hibernate-core</artifactId>
 				<version>${wsrest.hibernate.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-commons-annotations</artifactId>
+				<version>3.2.0.Final</version>
+			</dependency>
 
 			<dependency>
 				<groupId>com.thoughtworks.xstream</groupId>
 				<artifactId>xstream</artifactId>
 				<version>1.4.7</version>
+			</dependency>
+
+			<!-- MySQL -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.33</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-dbcp2</artifactId>
+				<version>2.0.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.12.0.GA</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>2.2.2</version>
 			</dependency>
 
 		</dependencies>

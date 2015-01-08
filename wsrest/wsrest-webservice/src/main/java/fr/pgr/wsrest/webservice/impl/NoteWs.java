@@ -78,7 +78,8 @@ public class NoteWs extends Resource {
 				resource = new DomRepresentation(MediaType.TEXT_XML);
 				// User user = (User)
 				// SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-				((DomRepresentation) resource).setDocument(XMLUtils.marshal(note));
+				((DomRepresentation) resource).setDocument(XMLUtils
+						.marshal(note));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -88,7 +89,8 @@ public class NoteWs extends Resource {
 	}
 
 	@Override
-	public void acceptRepresentation(Representation entity) throws ResourceException {
+	public void acceptRepresentation(Representation entity)
+			throws ResourceException {
 		parseRequest();
 		Form form = new Form(entity);
 		String content = form.getFirstValue("content");
@@ -104,7 +106,8 @@ public class NoteWs extends Resource {
 	}
 
 	@Override
-	public void storeRepresentation(Representation entity) throws ResourceException {
+	public void storeRepresentation(Representation entity)
+			throws ResourceException {
 		parseRequest();
 		Form form = new Form(entity);
 		String content = form.getFirstValue("content");
